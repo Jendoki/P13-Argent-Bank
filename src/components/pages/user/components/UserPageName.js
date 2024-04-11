@@ -8,18 +8,17 @@ function UserPageName(props) {
     const [isEditingName, setIsEditingName] = useState(false)
     const [firstname, setFirstname] = useState(props.user.firstName)
     const [lastname, setLastname] = useState(props.user.lastName)
-
-    const token = props.token
+    const connexionToken = sessionStorage.getItem('connexionToken');
 
     function onFormSubmit(e) {
         e.preventDefault()
-        apiCalls(token)
+        apiCalls(connexionToken)
     }
 
-    async function apiCalls(token) {
+    async function apiCalls(connexionToken) {
         setIsLoading(true)
         try {
-            const result = await updateUserProfile(firstname, lastname, token)
+            const result = await updateUserProfile(firstname, lastname, connexionToken)
             setFirstname(firstname)
             setLastname(lastname)
             setIsEditingName(false)

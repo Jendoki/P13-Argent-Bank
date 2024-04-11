@@ -209,6 +209,12 @@ body {
   font-size: 1.2rem;
 }
 
+.input-wrapper-error input{
+  padding: 5px;
+  font-size: 1.2rem;
+  border: solid red;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -298,12 +304,12 @@ body {
 }
 
 .edit-form {
-  width: 40vw;
   margin: auto;
 }
 
 .edit-form-inputs {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
 }

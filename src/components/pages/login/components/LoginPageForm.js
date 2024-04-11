@@ -39,20 +39,14 @@ function LoginPageForm() {
         apiCalls();
     }
 
-    if (hasError) {
-        return (
-            <p>Il y a une erreur !</p>
-        );
-    }
-
     return (
         <>
             <form className="login-form" onSubmit={onFormSubmit}>
-                <div className="input-wrapper">
+                <div className={hasError ? "input-wrapper-error" : "input-wrapper"}>
                     <label htmlFor="username">Username</label>
                     <input type="text" id="username" name="username" value={username} onChange={(e) => setUsername(e.target.value)} />
                 </div>
-                <div className="input-wrapper">
+                <div className={hasError ? "input-wrapper-error" : "input-wrapper"}>
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
