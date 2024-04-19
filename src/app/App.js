@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/user" element={<UserPage />} />
+            <Route path="/profile" element={<UserPage />} />
           </Routes>
         </Router>
       </Provider>

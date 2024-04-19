@@ -27,7 +27,7 @@ function Header() {
             </a>
             <div className="main-nav-right-container">
                 {user && (
-                    <a className="main-nav-item" href="./user">
+                    <a className="main-nav-item" href="./profile">
                         <i className="fa fa-user-circle"></i>
                         {user.firstName}
                     </a>

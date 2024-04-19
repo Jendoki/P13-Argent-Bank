@@ -26,7 +26,7 @@ function LoginPageForm() {
                 }
             });
             sessionStorage.setItem("connexionToken", result);
-            navigate("/user", { state: { token: result } });
+            navigate("/profile", { state: { token: result } });
         } catch (error) {
             console.log("error", error);
             setHasError(true);

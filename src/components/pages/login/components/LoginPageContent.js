@@ -7,7 +7,7 @@ function LoginPageContent() {
 
     useEffect(() => {
         if (sessionStorage.getItem('connexionToken')) {
-            navigate("/user");
+            navigate("/profile");
         }
     }, [navigate]);
 
